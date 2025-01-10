@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Portfolio - Leo Nivakoski</title>
+	<link rel="stylesheet" href="CSS.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+	<header class="header">
+		
+		<div class="name">Leo Nivakoski</div>
+	</header>
+
+	<nav class="navbar">
+		<a href="#about" class="active">About Me</a>
+		<a href="#skills">Skills</a>
+		<a href="#projects2">Projects</a>
+		<a href="#contact">Contact</a>
+	</nav>
+
+	<section id="about" class="about">
+		<h1>About Me</h1>
+		<p>Hello! My name is Leo Nivakoski. I live in Finland, and I am a game developer.</p>
+	</section>
+
+	<section id="skills" class="skills">
+		<h1>My Skills</h1>
+		<div class="skill-list">
+			<div class="skill"><i class="fab fa-html5"></i> HTML</div>
+			<div class="skill"><i class="fab fa-css3-alt"></i> CSS</div>
+			<div class="skill"><i class="fas fa-code"></i> C#</div>
+			<div class="skill"><i class="fab fa-python"></i> Python</div>
+		</div>
+	</section>
+
+    <section id="projects2" class="projects2">
+        <h1>My Projects</h1>
+    </section>
+
+	<section id="projects" class="projects">
+		<div class="project">
+			<img src="kuva22.png" alt="Project 1">
+			<h3>Shadows</h3>
+			<p>This is my first 2D platformer. The idea is that you are a shadow that collects coins and dies if you touch light. You win by collecting all the coins and reaching a specific location.</p>
+		</div>
+		<div class="project">
+			<img src="images/project2.jpg" alt="Project 2">
+			<h3>Project 2</h3>
+			<p>Details coming soon.</p>
+		</div>
+	</section>
+
+	<section id="contact" class="contact">
+		<h1>Contact Me</h1>
+		<p>Feel free to reach out!</p>
+		<div class="socials">
+			<a href="https://github.com/Leobold08"><i class="fab fa-github"></i></a>
+			<a href="mailto:leonivakoski1@gmail.com"><i class="fas fa-envelope"></i></a>
+		</div>
+    
+
+	</section>
+    <section></section>
+    <section></section>
+    <section></section>
+
+	<footer class="footer">
+		<p>&copy; 2024 Leo Nivakoski. All rights reserved.</p>
+	</footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.navbar a');
+            let currentSection = "";
+    
+            // Loop through all sections and check if they are in view
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100; // Adjust the top offset for earlier activation
+                const sectionBottom = sectionTop + section.offsetHeight;
+    
+                // Log to check if the Contact section is being detected
+                console.log(`Section: ${section.id}, Top: ${sectionTop}, Bottom: ${sectionBottom}, Scroll Y: ${window.pageYOffset}`);
+    
+                // Check if the section is in the viewport
+                if (pageYOffset >= sectionTop && pageYOffset < sectionBottom) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+    
+            // Remove the 'active' class from all navbar links
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                // Add the 'active' class to the link of the section currently in view
+                if (link.getAttribute('href').substring(1) === currentSection) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    
+        // Add smooth scrolling effect to anchor clicks
+        document.querySelectorAll('.navbar a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                window.scrollTo({
+                    top: targetSection.offsetTop - 50, // Adjust the scroll position for better centering
+                    behavior: 'smooth',
+                });
+            });
+        });
+    </script>
+    
+    
+    
+      
+      
+</body>
+</html>
