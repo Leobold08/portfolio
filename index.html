@@ -21,34 +21,92 @@
 	</nav>
 
 	<section id="about" class="about">
-		<h1>About Me</h1>
-		<p>Hello! My name is Leo Nivakoski and i live in Finland.</p>
+		<div class="about-card">
+			<h1>About Me</h1>
+			<p>Hello! My name is Leo Nivakoski and I'm a game developer from Finland.</p>
+		</div>
 	</section>
 
 	<section id="skills" class="skills">
 		<h1>My Skills</h1>
 		<div class="skill-list">
-			<div class="skill"><i class="fab fa-html5"></i> HTML</div>
-			<div class="skill"><i class="fab fa-css3-alt"></i> CSS</div>
-			<div class="skill"><i class="fas fa-code"></i> C#</div>
-			<div class="skill"><i class="fab fa-python"></i> Python</div>
+			<div class="skill"><i class="fab fa-html5"></i><span>HTML</span></div>
+			<div class="skill"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
+			<div class="skill"><i class="fas fa-code"></i><span>C#</span></div>
+			<div class="skill"><i class="fab fa-python"></i><span>Python</span></div>
+			<div class="skill"><i class="fab fa-github"></i><span>GitHub</span></div>
+			<div class="skill"><i class="fab fa-git-alt"></i><span>Git</span></div>
+			<div class="skill"><i class="fab fa-unity"></i><span>Unity</span></div>
+			<div class="skill"><i class="fab fa-microsoft"></i><span>Visual Studio</span></div>
+			<div class="skill"><i class="fas fa-gamepad"></i><span>UE5</span></div>
 		</div>
 	</section>
 
     <section id="projects2" class="projects2">
-        <h1>My Projects</h1>
+        <h1>Projects</h1>
     </section>
 
 	<section id="projects" class="projects">
-		<div class="project">
-			<img src="kuva22.png" alt="Project 1">
-			<h3>Shadows</h3>
-			<p>This is my first 2D platformer. The idea is that you are a shadow that collects coins and dies if you touch light. You win by collecting all the coins and reaching a specific location.</p>
+		<div class="project has-video" role="button" tabindex="0" data-details="Amisdrift is a team racing game focused on tight drift mechanics, custom cars, and competitive multiplayer. Built in Unity with C#." data-popup="What i have contributed to this project: Racing mechanic and all of multiplayer" data-video="DriftTrailer.mp4">
+			<div class="project-media">
+				<img src="Amisdriftposter.png" alt="Amisdrift">
+			</div>
+			<div class="project-content">
+				<h3>Amisdrift</h3>
+				<p>My first Team project. In Amisdrift you drift to get more points and race against others. Steam page coming soon.</p>
+				<div class="project-tags">
+					<span class="project-tag">3D</span>
+					<span class="project-tag">Unity</span>
+					<span class="project-tag">C#</span>
+					<span class="project-tag">Steam</span>
+					<span class="project-tag">Multiplayer coming soon</span>
+				</div>
+			</div>
+			<div class="project-video">
+				<video controls>
+					<source src="DriftTrailer.mp4" type="video/mp4">
+				</video>
+			</div>
 		</div>
-		<div class="project">
-			<img src="images/project2.jpg" alt="Project 2">
-			<h3>Project 2</h3>
-			<p>Details coming soon.</p>
+		<div class="project" role="button" tabindex="0" data-details="A 2D platformer where you play as a shadow. Collect coins, avoid light, and reach the exit to win. Built in Godot with C#." data-popup="what i have contributed to this project: I made the whole game by myself" >
+			<div class="project-media">
+				<img src="kuva22.png" alt="Shadows Game">
+			</div>
+			<div class="project-content">
+				<h3>Shadows</h3>
+				<p>This is my first 2D platformer. The idea is that you are a shadow that collects coins and dies if you touch light. You win by collecting all the coins and reaching a specific location.</p>
+				<div class="project-tags">
+					<span class="project-tag">2D Platformer</span>
+					<span class="project-tag">Godot</span>
+					<span class="project-tag">C#</span>
+				</div>
+			</div>
+		</div>
+		<div class="project" role="button" tabindex="0" data-details="A tense UE5 horror experience featuring puzzle-solving and stealth. Built using Unreal Engine 5 blueprints." data-popup="What i have contributed to this project: All maps and tutorial" >
+			<div class="project-media">
+				<img src="project3.png" alt="Project 3">
+			</div>
+			<div class="project-content">
+				<h3>Unreal engine Horror game</h3>
+				<p>Horror game developed using Unreal Engine. In the game you have to avoid the monsters and do puzzles to get out of the woods.</p>
+				<div class="project-tags">
+					<span class="project-tag">UE5</span>
+					<span class="project-tag">UE5 BP</span>
+				</div>
+			</div>
+		</div>
+		<div class="project" role="button" tabindex="0" data-details="Personal portfolio site built with HTML and CSS to showcase projects, skills, and contact details." data-popup="What i have contributed to this project: I made the whole portfolio by myself" >
+			<div class="project-media">
+				<img src="project4.png" alt="Project 4">
+			</div>
+			<div class="project-content">
+				<h3>Portfolio</h3>
+				<p>This portfolio you are viewing.</p>
+				<div class="project-tags">
+					<span class="project-tag">html</span>
+					<span class="project-tag">css</span>
+				</div>
+			</div>
 		</div>
 	</section>
 
@@ -62,13 +120,30 @@
     
 
 	</section>
-    <section></section>
-    <section></section>
-    <section></section>
 
 	<footer class="footer">
 		<p>&copy; 2024 Leo Nivakoski. All rights reserved.</p>
 	</footer>
+
+	<div class="project-modal" aria-hidden="true">
+		<div class="project-modal__backdrop" data-modal-close></div>
+		<div class="project-modal__content" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
+			<button class="project-modal__close" type="button" aria-label="Close project details">&times;</button>
+			<div class="project-modal__media">
+				<img class="project-modal__image" src="" alt="">
+			</div>
+			<div class="project-modal__body">
+				<h3 id="project-modal-title"></h3>
+				<p class="project-modal__text"></p>
+				<div class="project-modal__tags"></div>
+				<video class="project-modal__video" controls>
+					<source src="" type="video/mp4">
+				</video>
+			</div>
+		</div>
+	</div>
+
+	<div class="mouse-light"></div>
 
     <script>
         window.addEventListener('scroll', function() {
@@ -76,42 +151,120 @@
             const navLinks = document.querySelectorAll('.navbar a');
             let currentSection = "";
     
-            // Loop through all sections and check if they are in view
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 100; // Adjust the top offset for earlier activation
+sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
                 const sectionBottom = sectionTop + section.offsetHeight;
-    
-                // Log to check if the Contact section is being detected
+
                 console.log(`Section: ${section.id}, Top: ${sectionTop}, Bottom: ${sectionBottom}, Scroll Y: ${window.pageYOffset}`);
-    
-                // Check if the section is in the viewport
+
                 if (pageYOffset >= sectionTop && pageYOffset < sectionBottom) {
                     currentSection = section.getAttribute('id');
                 }
             });
     
-            // Remove the 'active' class from all navbar links
             navLinks.forEach(link => {
                 link.classList.remove('active');
-                // Add the 'active' class to the link of the section currently in view
                 if (link.getAttribute('href').substring(1) === currentSection) {
                     link.classList.add('active');
                 }
             });
         });
     
-        // Add smooth scrolling effect to anchor clicks
         document.querySelectorAll('.navbar a').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href').substring(1);
                 const targetSection = document.getElementById(targetId);
                 window.scrollTo({
-                    top: targetSection.offsetTop - 50, // Adjust the scroll position for better centering
+                    top: targetSection.offsetTop - 50,
                     behavior: 'smooth',
                 });
             });
         });
+
+        const mouseLight = document.querySelector('.mouse-light');
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX;
+            const y = e.clientY;
+            mouseLight.style.left = x + 'px';
+            mouseLight.style.top = y + 'px';
+        });
+
+		const modal = document.querySelector('.project-modal');
+		const modalTitle = document.getElementById('project-modal-title');
+		const modalText = document.querySelector('.project-modal__text');
+		const modalTags = document.querySelector('.project-modal__tags');
+		const modalImage = document.querySelector('.project-modal__image');
+		const modalVideo = document.querySelector('.project-modal__video');
+		const modalVideoSource = modalVideo.querySelector('source');
+		const modalCloseButton = document.querySelector('.project-modal__close');
+
+		const closeModal = () => {
+			modal.classList.remove('is-open');
+			modal.setAttribute('aria-hidden', 'true');
+			document.body.classList.remove('modal-open');
+			modalVideo.pause();
+			modalVideoSource.removeAttribute('src');
+			modalVideo.load();
+		};
+
+		const openModal = (project) => {
+			const title = project.querySelector('h3')?.textContent || 'Project';
+			const details = project.dataset.popup || project.dataset.details || project.querySelector('p')?.textContent || '';
+			const image = project.querySelector('.project-media img');
+			const video = project.dataset.video;
+
+			modalTitle.textContent = title;
+			modalText.textContent = details;
+			modalTags.innerHTML = '';
+
+			project.querySelectorAll('.project-tag').forEach(tag => {
+				const tagEl = document.createElement('span');
+				tagEl.className = 'project-modal__tag';
+				tagEl.textContent = tag.textContent;
+				modalTags.appendChild(tagEl);
+			});
+
+			if (image) {
+				modalImage.src = image.getAttribute('src');
+				modalImage.alt = image.getAttribute('alt') || title;
+				modalImage.style.display = 'block';
+			} else {
+				modalImage.style.display = 'none';
+			}
+
+			if (video) {
+				modalVideoSource.src = video;
+				modalVideo.style.display = 'block';
+				modalVideo.load();
+			} else {
+				modalVideo.style.display = 'none';
+				modalVideoSource.removeAttribute('src');
+				modalVideo.load();
+			}
+
+			modal.classList.add('is-open');
+			modal.setAttribute('aria-hidden', 'false');
+			document.body.classList.add('modal-open');
+		};
+
+		document.querySelectorAll('.project').forEach(project => {
+			project.addEventListener('click', () => openModal(project));
+			project.addEventListener('keydown', (event) => {
+				if (event.key === 'Enter' || event.key === ' ') {
+					event.preventDefault();
+					openModal(project);
+				}
+			});
+		});
+
+		modalCloseButton.addEventListener('click', closeModal);
+		modal.querySelector('.project-modal__backdrop').addEventListener('click', closeModal);
+		document.addEventListener('keydown', (event) => {
+			if (event.key === 'Escape' && modal.classList.contains('is-open')) {
+				closeModal();
+			}
+		});
     </script>
     
     
