@@ -7,6 +7,18 @@
 	font-display: swap;
 }
 
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
 body {
 	margin: 0;
 	font-family: "MyFont", Arial, sans-serif;
@@ -62,12 +74,15 @@ header {
 
 a {
 	color: inherit;
+	overflow-wrap: anywhere;
+	word-break: break-word;
 }
 
 .project-row {
 	display: flex;
 	align-items: flex-start;
 	gap: 24px;
+	flex-wrap: wrap;
 }
 
 .project-text {
@@ -78,6 +93,8 @@ a {
 
 .project-desc {
 	margin: 0;
+	overflow-wrap: anywhere;
+	word-break: break-word;
 }
 
 .project-item summary {
@@ -97,12 +114,14 @@ a {
 
 .amis {
 	max-height: 400px;
-	width: auto;
+	width: 360px;
+	max-width: 100%;
 }
 
 .unreal {
 	max-height: 300px;
-	width: auto;
+	width: 360px;
+	max-width: 100%;
 }
 
 @media (max-width: 700px) {
