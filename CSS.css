@@ -23,7 +23,7 @@ body {
 	margin: 0;
 	font-family: "MyFont", Arial, sans-serif;
 	min-height: 100vh;
-	background-color: #ff0000;
+	background-color: #000000;
 	background-image: url("PhotosAndVideos/background.jpg");
 	background-size: cover;
 	background-position: center;
